@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  get 'open/index'
+  resources :users
 
-  get 'restricted/index'
-
-  get 'restricted/restricted'
 
   root "statics#home"
 
