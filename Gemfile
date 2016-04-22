@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
 
+gem 'devise'
 gem "foundation-rails", '~>5.5.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
