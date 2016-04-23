@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # this will resrtict unregistered users to see all except below
   before_action :authenticate_user!, except:[:show,:index] 
+  
 
   def index
     @users = User.all
