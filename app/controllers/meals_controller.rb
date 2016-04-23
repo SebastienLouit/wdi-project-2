@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-before_filter :authenticate, except: [:index]
+
 
   def index
     @meals = Meal.all
@@ -34,6 +34,6 @@ before_filter :authenticate, except: [:index]
 
   private 
     def meal_params
-      params.require(:meal).permit(:title, :description, :type )
+      params.require(:meal).permit(:title, :description, :category, :image )
     end
 end

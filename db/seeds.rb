@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
-Meals.destroy_all
+Meal.destroy_all
 
 u1 = User.create!(email: "sebastien.louit@gmail.com", 
                   password: "password", 
                   username: "sebastien", 
                   name: "Sebastien",
-                  description: "Meat lover, curry cooker and salmond eater"
+                  description: "Meat lover, curry cooker and salmond eater",
                   photo: "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/62671_10153018266300851_120386450870403545_n.jpg?oh=5876f837fb34d2a444a60217355c5505&oe=577677C4", 
                   location: "Notting Hill, London")
             
@@ -29,4 +29,4 @@ u2 = User.create!(email: "marion.heuze@gmail.com",
 m1 = u1.meals.create!(title: "A super home-made curry",
                          description: "The best curry ever",
                          image: "http://www.katherinemartinelli.com/wp-content/uploads/2011/10/Japanese-Chicken-Curry-1.jpg",
-                         type: "asian food")
+                         category: "asian food")
