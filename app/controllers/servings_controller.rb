@@ -4,7 +4,7 @@ class ServingsController < ApplicationController
   end
 
   def new
-    @serving = Serving.new
+    @serving  = Serving.new
   end
 
   def show
