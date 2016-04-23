@@ -1,0 +1,29 @@
+<h1>Add a serving</h1>
+<%= form_for @serving do |f| %>
+  <% if @serving.errors.any? %>
+    <% for message in @serving.errors.full_messages %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <fieldset class="form-group">
+    <%= f.label :day %>
+    <%= f.text_field :day, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :number %>
+    <%= f.text_area :number, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :price %>
+    <%= f.number_field :price, class: "form-control", step: 0.01 %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, class: "form-control" %>
+  </fieldset>
+  <%= f.submit class: "btn btn-primary" %>
+
+<% end %>

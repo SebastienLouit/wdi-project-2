@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: MyString
+  price: 1.5
+  location: MyString
+  number: 1
+  user_id: 
+  meal: 
+
+two:
+  day: MyString
+  price: 1.5
+  location: MyString
+  number: 1
+  user_id: 
+  meal: 

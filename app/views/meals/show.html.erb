@@ -1,2 +1,21 @@
-<h1>Meals#show</h1>
-<p>Find me in app/views/meals/show.html.erb</p>
+
+<div class="row">
+  <div class="medium-8 columns">
+    <div class="card">
+      <div class="image">
+        <img src="<%= @meal.image %>">
+        <span class="title"><%= @meal.title %></span>
+      </div>
+      <div class="content">
+        <p><%= @meal.category %></p>
+        <p><%= @meal.description %></p>
+      </div>
+      <div class="action">
+        <%= link_to 'Edit Meal', edit_meal_path %>
+      </div>
+      <div class="action">
+        <%= link_to 'Make it a serving', edit_serving_path %>
+      </div>
+    </div>
+  </div>
+</div>

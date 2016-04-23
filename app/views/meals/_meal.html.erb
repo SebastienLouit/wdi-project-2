@@ -8,7 +8,11 @@
     <p><%= meal.category %></p>
     <p><%= meal.description %></p>
   </div>
-   
+   <div class="action">
+     <%= link_to 'More details', meal_path(meal.id) %>
+   </div>
+
+
 </div>
 </div>
 
