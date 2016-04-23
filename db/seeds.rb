@@ -26,7 +26,7 @@ u2 = User.create!(email: "marion.heuze@gmail.com",
                   location: "Something Hill, London")
 
 
-m1 = u1.services.create!(title: "A super home-made curry",
+m1 = u1.meals.create!(title: "A super home-made curry",
                          description: "The best curry ever",
                          image: "http://www.katherinemartinelli.com/wp-content/uploads/2011/10/Japanese-Chicken-Curry-1.jpg",
                          type: "asian food")
