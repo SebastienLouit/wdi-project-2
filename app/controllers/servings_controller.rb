@@ -12,8 +12,7 @@ class ServingsController < ApplicationController
   end
 
  def create
-  
-   @servings = current_user.servings.new(serving_params)
+   @serving = current_user.servings.new(serving_params)
    if @serving.save
      flash[:success] = "Your serving has now been listed!"
      redirect_to servings_path

@@ -22,10 +22,12 @@ ActiveRecord::Schema.define(version: 20160423125825) do
     t.string   "image"
     t.string   "category"
     t.integer  "user_id"
+    t.integer  "meal_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
+  add_index "meals", ["meal_id"], name: "index_meals_on_meal_id", using: :btree
   add_index "meals", ["user_id"], name: "index_meals_on_user_id", using: :btree
 
   create_table "servings", force: :cascade do |t|
@@ -66,6 +68,7 @@ ActiveRecord::Schema.define(version: 20160423125825) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "meals", "meals"
   add_foreign_key "meals", "users"
   add_foreign_key "servings", "meals"
   add_foreign_key "servings", "users"
