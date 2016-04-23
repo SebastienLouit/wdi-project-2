@@ -1,2 +1,29 @@
-<h1>Meals#new</h1>
-<p>Find me in app/views/meals/new.html.erb</p>
+<h1>List Meals</h1>
+<%= form_for @meal do |f| %>
+  <% if @meal.errors.any? %>
+    <% for message in @meal.errors.full_messages %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <fieldset class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :image %>
+    <%= f.text_field :image, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :type %>
+    <%= f.text_field :type, class: "form-control" %>
+  </fieldset>
+  <%= f.submit class: "btn btn-primary" %>
+
+<% end %>
