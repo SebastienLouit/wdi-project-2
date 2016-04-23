@@ -11,11 +11,19 @@ class ServingsController < ApplicationController
     @serving = Serving.find(params[:id])
   end
 
-  def create
-  end
+ def create
+  
+   @servings = current_user.servings.new(serving_params)
+   if @serving.save
+     flash[:success] = "Your serving has now been listed!"
+     redirect_to servings_path
+   else 
+     render "new"
+   end 
+ end
+
 
   def edit
-   
   end
 
   def destroy

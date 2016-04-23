@@ -1,6 +1,4 @@
 class MealsController < ApplicationController
-
-
   def index
     @meals = Meal.all
   end
@@ -27,6 +25,7 @@ class MealsController < ApplicationController
   end
 
   def update
+
   end
 
   def destroy

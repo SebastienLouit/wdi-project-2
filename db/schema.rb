@@ -34,11 +34,13 @@ ActiveRecord::Schema.define(version: 20160423125825) do
     t.string   "location"
     t.integer  "number"
     t.integer  "meal_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "servings", ["meal_id"], name: "index_servings_on_meal_id", using: :btree
+  add_index "servings", ["user_id"], name: "index_servings_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -66,4 +68,5 @@ ActiveRecord::Schema.define(version: 20160423125825) do
 
   add_foreign_key "meals", "users"
   add_foreign_key "servings", "meals"
+  add_foreign_key "servings", "users"
 end

@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   has_many :meals
-
+  has_many :servings, through: :meals
 end
