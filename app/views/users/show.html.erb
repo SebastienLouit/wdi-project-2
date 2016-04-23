@@ -1,3 +1,20 @@
-<%= @user.name %>
 
-<%= link_to "Edit profile", edit_user_path %>
+<div class="row">
+  <div class="medium-8 columns">
+    <div class="card">
+      <div class="image">
+        <img src="<%= @user.photo %>">
+        <span class="title"><%= @user.name %></span>
+      </div>
+      <div class="content">
+      <p><%= @user.location %></p>
+        <p><%= @user.description %></p>
+      </div>
+      <div class="action">
+        <%= link_to 'Edit profile', edit_user_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

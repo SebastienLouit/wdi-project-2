@@ -1,27 +1,16 @@
-<li>
-    <ul>
-        <li><%= user.name %></li>
-        <li><%= user.email %></li>
-        <li><%= link_to 'More info', user_path(user.id) %></li>
-    </ul>
-</li>
-
-
-
-<div class="row">
-  <div class="medium-4 columns">
-    <div class="card">
-      <div class="image">
-        <img src="<%= user.photo %>">
-        <span class="title"><%= user.name %></span>
-      </div>
-      <div class="content">
-      <p><%= user.location %></p>
-        <p>THIS WILL HOLD USER DESCRIPTION</p>
-      </div>
-      <div class="action">
-        <%= link_to 'More info', user_path(user.id) %>
-      </div>
-    </div>
+<div class="medium-4 columns" data-equalizer-watch>
+<div class="card">
+  <div class="image">
+    <img src="<%= user.photo %>">
+    <span class="title"><%= user.name %></span>
+  </div>
+  <div class="content">
+    <p><%= user.location %></p>
+    <p><%= user.description %></p>
+  </div>
+  <div class="action">
+    <%= link_to 'More info', user_path(user.id) %>
   </div>
 </div>
+</div>
+
