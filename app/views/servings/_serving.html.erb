@@ -1,18 +1,20 @@
 
-  <div class="medium-4 columns" data-equalizer-watch>
-  <%= render @meals %>
-  
-  <div class="card">  
-    <div class="content">
-
-     <p><%= serving.day %></p>
-     <p><%= serving.price %></p>
-     <p><%= serving.location %></p>
-     <p><%= serving.number %></p>
-    </div>
-     <div class="action">
-       <%= link_to 'More on this serving', serving_path(serving.id) %>
-       <%= link_to "Order", new_serving_order_path(serving), class: "btn-btn-primary" %>
+   <div class="row">
+   <%= render @meals %>
+     <div class="medium-6 columns end">
+       <div class="card">
+       <div class="action">
+       <ul class="small-block-grid-2">
+            <li><%= serving.day %></li>
+            <li><%= serving.location %></li>
+          </ul>
+          <ul class="small-block-grid-2">
+            <li><%= serving.price %></li>
+            <li><%= link_to "Order", new_serving_order_path(serving), class: "btn-btn-primary" %></li>
+          </ul>
+       </div>
+       </div>
      </div>
-  </div>
-  </div>
+   </div>
+
+

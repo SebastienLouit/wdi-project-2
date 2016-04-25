@@ -1,18 +1,20 @@
-<div class="medium-4 columns" data-equalizer-watch>
-<div class="card">
-  <div class="image">
-    <img src="<%= meal.image %>">
-    <span class="title"><%= meal.title %></span>
-  </div>
-  <div class="content">
-    <p><%= meal.category %></p>
-    <p><%= meal.description %></p>
-  </div>
-   <div class="action">
-     <%= link_to 'More details', meal_path(meal.id) %>
-   </div>
 
 
-</div>
+<div class="row">
+  <div class="medium-6 columns end">
+    <div class="card">
+    <div class="image">
+      <img src="<%= meal.image %>">     
+    </div>
+      <div class="content">
+        <span class="title"><%= meal.title %></span>
+        <p><%= meal.description %></p>
+        <p><%= meal.category %></p>
+      </div>
+      <div class="action">
+      <%= link_to 'More details', meal_path(meal.id) %>
+      </div>
+    </div>
+  </div>
 </div>
 
