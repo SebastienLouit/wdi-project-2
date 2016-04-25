@@ -11,7 +11,7 @@
   <% end %>
 
  <fieldset class="form-group">
-  <%= f.collection_select :meal_id, Meal.order(:title),:id,:title, include_blank: true %>
+  <%= f.collection_select :meal_id, Meal.where(user_id: current_user.id),:id,:title, include_blank: true %>
   </fieldset>
   <fieldset class="form-group">
     <%= f.label :day %>

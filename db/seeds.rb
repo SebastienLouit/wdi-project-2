@@ -32,7 +32,7 @@ m1 = u1.meals.create!(title: "A super home-made curry",
                       image: "http://www.katherinemartinelli.com/wp-content/uploads/2011/10/Japanese-Chicken-Curry-1.jpg",
                       category: "asian food")
 
-s1 = Serving.create!(   meal_id: m1.id,
+u1.servings.create!(   meal_id: m1.id,
                         day: "monday 12",
                         price: 12,
                         location: "Coven Garden",
