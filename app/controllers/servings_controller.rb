@@ -1,6 +1,7 @@
 class ServingsController < ApplicationController
   def index
     @servings = Serving.all
+    @meals    = Meal.all
   end
 
   def new
