@@ -1,20 +1,25 @@
 
-   <div class="row">
-   <%= render @meals %>
-     <div class="medium-6 columns end">
-       <div class="card">
-       <div class="action">
-       <ul class="small-block-grid-2">
-            <li><%= serving.day %></li>
-            <li><%= serving.location %></li>
-          </ul>
-          <ul class="small-block-grid-2">
-            <li><%= serving.price %></li>
-            <li><%= link_to "Order", new_serving_order_path(serving), class: "btn-btn-primary" %></li>
-          </ul>
-       </div>
-       </div>
-     </div>
+<div class="medium-6 columns end">
+ <div class="card">
+ <div class="image">
+   <img src="<%= serving.meal.image %>">     
+ </div>
+   <div class="content">
+     <span class="title"><%= serving.meal.title %></span>
+     <p><%= serving.meal.description %></p>
+     <p><%= serving.meal.category %></p>
    </div>
+     <ul class="small-block-grid-2">
+      <li><h5>Day:</h5><b><%= serving.day %></b></li>
+      <li><h5>Location:</h5><b><%= serving.location %></b></li>
+    </ul>
+    <ul class="small-block-grid-2">
+      <li><h5>Price:</h5><b><%= serving.price %> £<b></li>
+      <li><%= link_to "Order", new_serving_order_path(serving), class: "btn-btn-primary" %></li>
+    </ul>
+  </div>
+</div>
+</div>
+
 
 
