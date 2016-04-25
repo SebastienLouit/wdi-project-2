@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
 
   has_many :meals
   has_many :servings, through: :meals
+  has_many :orders
 end

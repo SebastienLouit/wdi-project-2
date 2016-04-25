@@ -7,5 +7,6 @@
 <li><%= serving.location %></li>
 <li><%= serving.number %></li>
 <%= link_to 'More on this serving', serving_path(serving.id) %>
+<%= link_to "Order", new_serving_order_path(serving), class: "btn-btn-primary" %>
 
   

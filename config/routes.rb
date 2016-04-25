@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   
   resources  :users
   resources  :meals
-  resources  :servings
+  resources :servings do
+  resources :orders
+ end
 
 
-  root "statics#home"
+ root "statics#home"
 
 end
 

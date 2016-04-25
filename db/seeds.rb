@@ -38,5 +38,11 @@ s1 = Serving.create!(   meal_id: m1.id,
                         location: "Coven Garden",
                         number: 5)
 
+o1 = Order.create!(serving_id: s1.id,
+                         details: "Looking forward to taste this delicious curry",
+                         sender_id: u1.id,
+                         receiver_id: u2.id)
+
+
 
 

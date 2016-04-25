@@ -10,9 +10,9 @@
     <% end %>
   <% end %>
 
- 
-
-
+ <fieldset class="form-group">
+  <%= f.collection_select :meal_id, Meal.order(:title),:id,:title, include_blank: true %>
+  </fieldset>
   <fieldset class="form-group">
     <%= f.label :day %>
     <%= f.text_field :day, class: "form-control" %>
