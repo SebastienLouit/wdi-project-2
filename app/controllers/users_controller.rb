@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # this will resrtict unregistered users to see all except below
   before_action :authenticate_user!, except:[:show,:index] 
-  before_action :search_params 
+ 
 
   def index
     @users = User.all
@@ -33,10 +33,6 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :location, :photo, :phone, :description)
   end
 
-  def search_params
-    @q = User.search(params[:q])
-    @users = @q.result(distinct: true)
-  end
 
 end
 

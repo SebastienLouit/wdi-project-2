@@ -23,10 +23,10 @@
      <%= f.label :graffiti_image %><br />
      <%= f.file_field :graffiti_image %>
    </div>
-  <fieldset class="form-group">
-    <%= f.label :category %>
-    <%= f.text_field :category, class: "form-control" %>
-  </fieldset>
+ <div class="field">
+     <%= f.label :category %>
+     <%= f.select :category, ['French', 'British','Asian','Italian','Japanese','Vegan','Organic','Salad','Mediterranean', 'Other'] %>
+   </div>
   
   <%= f.submit "standard" , class: "btn btn-primary" %>
   <%= f.submit "serving" , class: "btn btn-primary" %>

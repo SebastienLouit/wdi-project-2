@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources  :meals
   resources :servings do
   resources :orders
+  resources :comments, only: [:create, :destroy]
  end
 
  get "/inbox", to: "orders#inbox"

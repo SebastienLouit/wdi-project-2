@@ -1,5 +1,6 @@
 class ServingsController < ApplicationController
   before_action :search_params 
+
   def index
     @servings = Serving.all
     @meals    = Meal.all
@@ -11,6 +12,7 @@ class ServingsController < ApplicationController
 
   def show
     @serving = Serving.find(params[:id])
+    @comments = @serving.comments
   end
 
  def create
@@ -27,6 +29,8 @@ class ServingsController < ApplicationController
 
   def edit
   end
+
+
 
   def destroy
   end

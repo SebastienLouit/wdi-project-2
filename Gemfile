@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
+gem 'acts_as_commentable', '4.0.2'
 gem 'ransack'
 gem 'rmagick'
 gem 'carrierwave', '0.10.0'

@@ -58,9 +58,10 @@ before_action :set_order, only: [:accept, :reject, :cancel]
     params.require(:order).permit(:details, :deadline, :servings_id)
 
   end
+  
   def search_params
-    @q = Meal.search(params[:q])
-    @meals = @q.result(distinct: true)
+    @q = Serving.search(params[:q])
+    @servings = @q.result(distinct: true)
   end
 
 

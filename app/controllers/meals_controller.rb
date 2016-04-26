@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-  before_action :search_params 
+
 
   def index
     @meals = Meal.all
@@ -11,6 +11,7 @@ class MealsController < ApplicationController
 
   def show
     @meal = Meal.find(params[:id])
+    
   end
 
   def create
@@ -49,8 +50,4 @@ class MealsController < ApplicationController
       params.require(:meal).permit(:title, :description, :category, :image, :graffiti_image )
     end
 
-    def search_params
-      @q = Meal.search(params[:q])
-      @meals = @q.result(distinct: true)
-    end
 end
