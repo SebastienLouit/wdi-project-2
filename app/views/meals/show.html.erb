@@ -3,7 +3,7 @@
   <div class="medium-8 columns">
     <div class="card">
       <div class="image">
-        <img src="<%= @meal.image %>">
+        <%= image_tag @meal.graffiti_image.url %>
         <span class="title"><%= @meal.title %></span>
       </div>
       <div class="content">

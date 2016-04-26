@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
-
+gem 'ransack'
+gem 'rmagick'
+gem 'carrierwave', '0.10.0'
 gem 'devise'
 gem "foundation-rails", '~>5.5.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

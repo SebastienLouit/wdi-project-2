@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+before_action :search_params 
 before_action :authenticate_user!
 before_action :set_order, only: [:accept, :reject, :cancel]
 
@@ -57,7 +58,10 @@ before_action :set_order, only: [:accept, :reject, :cancel]
     params.require(:order).permit(:details, :deadline, :servings_id)
 
   end
-
+  def search_params
+    @q = Meal.search(params[:q])
+    @meals = @q.result(distinct: true)
+  end
 
 
 end

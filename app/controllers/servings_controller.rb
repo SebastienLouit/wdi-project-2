@@ -1,4 +1,5 @@
 class ServingsController < ApplicationController
+  before_action :search_params 
   def index
     @servings = Serving.all
     @meals    = Meal.all
@@ -33,5 +34,10 @@ class ServingsController < ApplicationController
   private
       def serving_params
           params.require(:serving).permit(:meal_id,:day, :price, :number, :location)
+      end
+
+      def search_params
+        @q = Serving.search(params[:q])
+        @servings = @q.result(distinct: true)
       end
 end
