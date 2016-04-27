@@ -12,7 +12,7 @@ before_action :set_order, only: [:accept, :reject, :cancel]
     @serving = Serving.find(params[:serving_id])
     @order = @serving.orders.new(order_params)
     @order.sender_id = current_user.id
-    @order.receiver_id = @serving.user.id
+    @order.receiver_id = @serving.user_id
 
     if @order.save
       flash[:success] = "Your order was made sucessfully"
@@ -55,8 +55,7 @@ before_action :set_order, only: [:accept, :reject, :cancel]
   end
 
   def order_params
-    params.require(:order).permit(:details, :deadline, :servings_id)
-
+    params.require(:order).permit(:details, :receiver_id)
   end
   
   def search_params

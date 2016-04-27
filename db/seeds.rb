@@ -56,19 +56,22 @@ s1 = Serving.create!(   meal_id: m1.id,
                         day: Time.now + 1.week.to_i,
                         price: 12,
                         location: "Coven Garden",
-                        number: 5)
+                        number: 5,
+                        user_id: u1.id)
 
 s2 = Serving.create!(   meal_id: m2.id,
                         day: Time.now + 2.week.to_i,
                         price: 17,
                         location: "Notting Hill",
-                        number: 3)
+                        number: 3,
+                        user_id: u1.id)
 
 s3 = Serving.create!(   meal_id: m3.id,
                         day: Time.now + 1.week.to_i,
                         price: 21,
                         location: "Hyde Park",
-                        number: 2)
+                        number: 2,
+                        user_id: u1.id)
 
 o1 = Order.create!(serving_id: s1.id,
                          details: "Looking forward to taste this delicious curry",
