@@ -1,5 +1,7 @@
-<h1>Servings#show</h1>
-<p>Find me in app/views/servings/show.html.erb</p>
+
+
+<%= render @serving %>
+
 <%= render partial: 'comments/form', locals: { commentable: @serving } %>
 <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @serving } %>
 

@@ -1,16 +1,23 @@
-<div class="medium-4 columns" data-equalizer-watch>
-<div class="card">
-  <div class="image">
-    <img src="<%= user.photo %>">
-    <span class="title"><%= user.name %></span>
-  </div>
-  <div class="content">
-    <p><%= user.location %></p>
-    <p><%= user.description %></p>
-  </div>
-  <div class="action">
-    <%= link_to 'More info', user_path(user.id) %>
-  </div>
-</div>
-</div>
+  <article class="website-example row wide">
+    <div class="large-6 columns">
+      <div class="row">
+        <div class="small-8 columns">
+          <img src="<%= user.photo %>" alt="Member photo">
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <h3><%= user.name %></h3>
+      <h6><%= user.description %></h6>
+      <p><%= user.location %></p>
+      <div class="action">
+          <%= link_to 'More info', user_path(user.id) %>
+      </div>
 
+      <% if current_user == user %>
+        <div class="action">
+          <%= link_to 'Edit profile', edit_user_path(user.id) %>
+        </div>
+      <% end %> 
+    </div>
+  </article>

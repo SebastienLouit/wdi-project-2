@@ -2,16 +2,13 @@
 
 <button><%= sort_link @q, :day %></button>
 <button><%= sort_link @q, :price %></button>
+<button><%= sort_link @q, :location %></button>
 
-<li>
-<%= search_form_for @q do |f| %>
-<%= f.label :price_or_day_start %>
-<%= f.text_field :price_or_day_start %>
-<%= f.submit %>
-<% end %>
-</li>
 
-<div class="row" data-equalizer>
+<hr>
+
+<div class="row" data-equilizer>
 <%= render @servings %>
 </div>
+
 

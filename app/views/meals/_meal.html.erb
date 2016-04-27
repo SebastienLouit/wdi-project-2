@@ -1,7 +1,8 @@
-<div class="medium-6 columns" data-equilizer>
+<div class="medium-4 columns" data-equilizer>
     <div class="card">
       <div class="image">
-        <%= image_tag meal.graffiti_image %>    
+        <%= image_tag meal.graffiti_image %>
+        <span>Cook : <%= meal.user.name %></span>    
       </div>
       <div class="content">
         <span class="title"><%= meal.title %></span>
@@ -13,4 +14,3 @@
       </div>
     </div>
   </div>
-

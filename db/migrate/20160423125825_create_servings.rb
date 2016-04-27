@@ -1,7 +1,7 @@
 class CreateServings < ActiveRecord::Migration
   def change
     create_table :servings do |t|
-      t.string :day
+      t.date :day
       t.float :price
       t.string :location
       t.integer :number 

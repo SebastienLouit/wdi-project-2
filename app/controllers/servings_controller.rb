@@ -1,9 +1,10 @@
 class ServingsController < ApplicationController
-  before_action :search_params 
+  before_action :search_params
 
   def index
-    @servings = Serving.all
-    @meals    = Meal.all
+    # @q[servings] = Serving.search(params[:q])
+    # @q[meals] = Meal.search(params[:q])
+    # @results = @q.result(distinct: true)
   end
 
   def new

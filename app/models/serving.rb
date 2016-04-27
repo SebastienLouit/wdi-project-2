@@ -5,7 +5,5 @@ class Serving < ActiveRecord::Base
   acts_as_commentable
   validates :day, presence: true
   validates :price, presence: true
-  validates :location, presence: true
-
-  
+  validates :location, presence: true  
 end

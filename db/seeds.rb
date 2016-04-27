@@ -53,19 +53,19 @@ m4 = u2.meals.create!(title: "Hyper good duck",
                       category: " Duck")
 
 s1 = Serving.create!(   meal_id: m1.id,
-                        day: "monday 12",
+                        day: Time.now + 1.week.to_i,
                         price: 12,
                         location: "Coven Garden",
                         number: 5)
 
 s2 = Serving.create!(   meal_id: m2.id,
-                        day: "Tuesday 13",
+                        day: Time.now + 2.week.to_i,
                         price: 17,
                         location: "Notting Hill",
                         number: 3)
 
 s3 = Serving.create!(   meal_id: m3.id,
-                        day: "Wednsday 14",
+                        day: Time.now + 1.week.to_i,
                         price: 21,
                         location: "Hyde Park",
                         number: 2)

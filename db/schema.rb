@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20160426104858) do
   add_index "orders", ["serving_id"], name: "index_orders_on_serving_id", using: :btree
 
   create_table "servings", force: :cascade do |t|
-    t.string   "day"
+    t.date     "day"
     t.float    "price"
     t.string   "location"
     t.integer  "number"
