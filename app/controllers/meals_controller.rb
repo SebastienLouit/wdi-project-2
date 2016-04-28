@@ -16,6 +16,7 @@ class MealsController < ApplicationController
   end
 
   def create
+  
     @meal = current_user.meals.new(meal_params)
     if params[:commit] == 'Save in your meals'
       if @meal.save
@@ -39,12 +40,17 @@ class MealsController < ApplicationController
   end
 
   def update
-
+    @meal = Meal.find(params[:id])
+    if @meal.update(meal_params)
+      flash[:success] = "Your meal has now been updated!"
+      redirect_to @meal
+    else 
+      redirect_to :back
+    end 
   end
 
   def destroy
   end
-
 
   private 
     def meal_params

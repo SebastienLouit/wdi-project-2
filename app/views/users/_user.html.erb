@@ -1,4 +1,4 @@
-  <article class="website-example row wide spacer">
+<article class="website-example row wide spacer">
     <div class="large-6 columns">
       <div class="row">
         <div class="small-8 columns">
@@ -10,14 +10,12 @@
       <h3><%= user.name %></h3>
       <p><%= user.location %></p>
       <h6><%= user.description %></h6>
-      <div class="button text-transform">
-          <%= link_to 'More info', user_path(user.id) %>
-      </div>
+      <%= link_to 'More info', user_path(user.id), class: "button text-transform" %>
 
       <% if current_user == user %>
-        <div class="button text-transform">
-          <%= link_to 'Edit profile', edit_user_path(user.id) %>
-        </div>
+
+      <%= link_to 'Edit profile', edit_user_path(user.id), class: "button secondary" %>
       <% end %> 
     </div>
-  </article>
+</article>
+

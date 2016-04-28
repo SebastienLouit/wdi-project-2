@@ -31,6 +31,7 @@ class ServingsController < ApplicationController
   end
 
   def destroy
+    
   end
 
   private
