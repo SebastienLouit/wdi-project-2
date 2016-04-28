@@ -16,14 +16,14 @@ class MealsController < ApplicationController
 
   def create
     @meal = current_user.meals.new(meal_params)
-    if params[:commit] == 'standard'
+    if params[:commit] == 'Save in your meals'
       if @meal.save
         flash[:success] = "Your meal has now been listed!"
         redirect_to meals_path
       else 
         render "new"
       end 
-    elsif params[:commit] == 'serving'
+    elsif params[:commit] == 'Make it a serving !'
       if @meal.save
         flash[:success] = "Your meal has now been listed!"
         redirect_to new_serving_path

@@ -1,9 +1,7 @@
 // Place all the styles related to the statics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  margin: 2rem; //for demo only
-}
+
 
 .active-tb {
   position: relative;
@@ -22,8 +20,12 @@ body {
 }
 
 
-.row {
-  width: 100% ;
+img {
+  .example-orbit {
+    width: 100% ;
+    height: 400px;
+
+  }
 }
 
 li{

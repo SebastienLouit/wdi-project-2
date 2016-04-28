@@ -11,10 +11,14 @@
     </div>
   </div>
 </div>
-
-<button><%= sort_link @q, :day %></button>
+<ul class="small-block-grid-3">
+  <li><!-- Your content goes here --></li>
+  <li><button class="button text-transform"><%= sort_link @q, :day %></button>
 <button><%= sort_link @q, :price %></button>
-<button><%= sort_link @q, :location %></button>
+<button><%= sort_link @q, :location %></button></li>
+  <li><!-- Your content goes here --></li>
+</ul>
+
 
 
 <%= render "servings/serving" %>

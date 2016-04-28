@@ -8,14 +8,14 @@
     </div>
     <div class="large-6 columns">
       <h3><%= user.name %></h3>
-      <h6><%= user.description %></h6>
       <p><%= user.location %></p>
-      <div class="action">
+      <h6><%= user.description %></h6>
+      <div class="button text-transform">
           <%= link_to 'More info', user_path(user.id) %>
       </div>
 
       <% if current_user == user %>
-        <div class="action">
+        <div class="button text-transform">
           <%= link_to 'Edit profile', edit_user_path(user.id) %>
         </div>
       <% end %> 

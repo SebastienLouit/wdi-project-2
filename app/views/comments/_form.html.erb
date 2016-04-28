@@ -1,3 +1,4 @@
+<div class="medium-4 columns" data-equalizer-watch>
 <%= form_for(:comment, url: comments_path(commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id)) do |f| %>
 
   <%= f.text_area :title, placeholder: "Add a title" %>
@@ -5,3 +6,4 @@
   <%= f.submit "Comment!" %>
 
 <% end %>
+</div>

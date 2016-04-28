@@ -11,25 +11,25 @@
   <% end %>
 
 
-  <fieldset class="form-group">
+
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>
-  </fieldset>
-  <fieldset class="form-group">
+
+  
     <%= f.label :description %>
     <%= f.text_area :description, class: "form-control" %>
-  </fieldset>
-  <div class="field">
-     <%= f.label :graffiti_image %><br />
+
+
+     <%= f.label :Upload_Image %>
      <%= f.file_field :graffiti_image %>
-   </div>
- <div class="field">
+
+
      <%= f.label :category %>
      <%= f.select :category, ['French', 'British','Asian','Italian','Japanese','Vegan','Organic','Salad','Mediterranean', 'Other'] %>
-   </div>
+
   
-  <%= f.submit "standard" , class: "btn btn-primary" %>
-  <%= f.submit "serving" , class: "btn btn-primary" %>
+  <%= f.submit "Save in your meals" , class: "button text-transform" %>
+  <%= f.submit "Make it a serving !" , class: "button text-transform" %>
 
 <% end %>
 </div>

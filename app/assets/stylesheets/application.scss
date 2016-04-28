@@ -20,6 +20,10 @@
  @import "font-awesome-sprockets";
   @import "font-awesome";
 
+
+
+
+
  .row {
   width:100%;
  }
@@ -37,9 +41,15 @@
 
 .content {
  height: 140px;
- padding: 10px;
+ padding: 0px;
 }
 
 body {
   margin: 0 auto;
+  background-color: rgba(255, 255, 237, 1); 
+  height: 100%;
+}
+
+button {
+  color: white
 }
