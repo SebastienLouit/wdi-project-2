@@ -1,27 +1,26 @@
 
+
+<div class ="container">
 <div class="row">
-  <div class="medium-8 columns">
-    <div class="card">
-      <div class="image">
-        <%= image_tag @meal.graffiti_image.url %>
-        <span class="title"><%= @meal.title %></span>
-      </div>
-      <div class="content">
-        <p><%= @meal.category %></p>
-        <p><%= @meal.description %></p>
-      </div>
-      <div class="action">
-        <%= link_to 'Edit Meal', edit_meal_path %>
-      </div>
-      <div class="action">
-        <%= link_to 'Make it a serving !', new_serving_path %>
-      </div>
-      <div class="action">
-       
-      </div>
-    </div>
-  </div>
+  <div class="small-6 large-8 columns"><div class="card">
+        <div class="image">
+          <%= image_tag @meal.graffiti_image.url %>
+          <span class="title"><%= @meal.title %></span>
+        </div>
+        <div class="content">
+          <h5>category :</h5><p><%= @meal.category %></p>
+          <h5>description :</h5><p><%= @meal.description %></p>
+        </div>
+        <div class="action">
+           <ul class="small-block-grid-2">
+            <li><b><%= link_to 'Edit Meal', edit_meal_path %></b></li>
+            <li><b><%= link_to 'Make it a serving !', new_serving_path %></b></li>
+          </ul>
+        </div>
 </div>
+</div>
+
+ 
 
 
 

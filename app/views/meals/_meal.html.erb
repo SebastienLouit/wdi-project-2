@@ -1,15 +1,18 @@
 <div class="medium-4 columns" data-equilizer>
     <div class="card">
       <div class="image">
-        <%= image_tag meal.graffiti_image %>     
+        <%= image_tag meal.graffiti_image %> 
+        <span class="title"><%= meal.title %></span>    
       </div>
       <div class="content">
-        <span class="title"><%= meal.title %></span>
         <p><%= meal.description %></p>
-        <p><%= meal.category %></p>
+        <hr>
+        <b>category :</b> <p><%= meal.category %></p>
       </div>
-      <div class="action">
-        <%= link_to 'More details', meal_path(meal.id) %>
-      </div>
+      <hr>
+         <ul class="small-block-grid-2">
+          <li><b><%= link_to 'Edit Meal', edit_meal_path %></b></li>
+          <li><b><%= link_to 'Make it a serving !', new_serving_path %></b></li>
+        </ul>
     </div>
   </div>

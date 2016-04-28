@@ -2,6 +2,7 @@ class MealsController < ApplicationController
 
 
   def index
+    @meal = Meal.find(params[:id])
     @meals = Meal.all
   end
 

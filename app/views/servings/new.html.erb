@@ -10,26 +10,25 @@
     <% end %>
   <% end %>
 
- <fieldset class="form-group">
+
   <%= f.collection_select :meal_id, Meal.where(user_id: current_user.id),:id,:title, include_blank: true %>
-  </fieldset>
-  <fieldset class="form-group">
+
+
     <%= f.label :day %>
     <%= f.date_field :day, class: "form-control" %>
-  </fieldset>
-  <fieldset class="form-group">
+
+  
     <%= f.label "avalability" %>
     <%= f.text_area :number, class: "form-control" %>
-  </fieldset>
-  <fieldset class="form-group">
+
+ 
     <%= f.label :price %>
     <%= f.number_field :price, class: "form-control", step: 0.01 %>
-  </fieldset>
-  <fieldset class="form-group">
+
     <%= f.label :location %>
     <%= f.text_field :location, class: "form-control" %>
-  </fieldset>
-  <%= f.submit class: "btn btn-primary" %>
+
+  <%= f.submit class: "button succes" %>
 
 <% end %>
 </div>

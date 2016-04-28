@@ -1,13 +1,23 @@
-<div class="card card-block row">
-
-  <p class="card-text"><%= order.details %></p>
-  <p class="card-text">Status: <%= order.status %></p>
-  <div class="actions pull-xs-right">
-    <% if current_page?(action: "outbox") %>
-      <%= link_to "Cancel", cancel_order_path(order), class: "btn btn-secondary" %>
-    <% else %>
-      <%= link_to "Reject", reject_order_path(order), class: "btn btn-danger" %>
-      <%= link_to "Accept", accept_order_path(order), class: "btn btn-success" %>
-    <% end %>
+<div class="row">
+  <div class="medium-8 columns">
+    <div class="callout-card">
+      <div class="card-label">
+        <div class="label-text">
+          Order!
+        </div>
+      </div>
+      <div class="callout-card-content">
+        <h3 class="lead"> <%= order.status %></h3>
+        <p><%= order.details %></p>
+      </div>
+      <div class="actions pull-xs-right">
+        <% if current_page?(action: "outbox") %>
+          <%= link_to "Cancel", cancel_order_path(order), class: "button disabled" %>
+        <% else %>
+          <%= link_to "Reject", reject_order_path(order), class: "button alert" %>
+          <%= link_to "Accept", accept_order_path(order), class: "button success" %>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
+  </div>
