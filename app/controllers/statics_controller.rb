@@ -8,9 +8,11 @@ class StaticsController < ApplicationController
   def map
     @users = User.all
     @servings = Serving.all
-    @hash = Gmaps4rails.build_markers(@servings) do |serving, marker|
+    @hash = Gmaps4rails.build_markers(@servings) do |serving, marker| 
+      serving_path = view_context.link_to serving.meal.title, serving_path(serving)
       marker.lat serving.latitude
       marker.lng serving.longitude
+      marker.infowindow "#{serving.meal.title}" 
     end
   end
 

@@ -7,14 +7,7 @@ class Serving < ActiveRecord::Base
   validates :price, presence: true
   validates :location, presence: true
 
-
-
-
   geocoded_by :location
   after_validation :geocode, :if => :location_changed? 
 
-
-  def check_for_lat_long
-
-  end 
 end
