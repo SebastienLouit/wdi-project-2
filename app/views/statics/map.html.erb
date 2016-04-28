@@ -1,0 +1,31 @@
+<div style='width: 100%;'>
+  <div id="map" style='width:100%; height: 400px;'></div>
+</div>
+
+<% for user in @users %>
+  <% user.servings.each do |s| %>
+  <%#= s.latitude %>
+  <%#= s.longitude %>
+  <% end%>
+<% end%>
+
+<!-- 
+get every user's serving location (lat and lng)
+pass lat and lng into buildMap
+-->
+
+<script type="text/javascript">
+  
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script>
+
+
+
+
+<%= render "servings/serving" %>
+

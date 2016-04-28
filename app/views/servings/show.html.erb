@@ -1,7 +1,9 @@
 
-<div class="container">
-<%= render @serving %>
-<div class="medium-8 columns">
+
+<%= render "servings/serving" %>
+
+
+
 <%= render partial: 'comments/form', locals: { commentable: @serving } %>
 <%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @serving } %>
 

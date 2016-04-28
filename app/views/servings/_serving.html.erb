@@ -1,24 +1,63 @@
+<% if current_page?(servings_path) || current_page?(map_path) %>
+  <% @servings.in_groups_of(3) do |group| %>
 
-<div class="medium-4 columns end" data-equalizer-watch>
+  <div class ="row spacer" data-equalizer>
+
+  <% group.compact.each do |serving|%>
+
+  <div class="medium-4 columns" data-equalizer-watch>
+   <div class="card">
+     <div class="image" style="height: 200px">
+       <img src="<%= serving.meal.graffiti_image %>">
+       <span> <span>Cook : <%= serving.meal.user.name %></span></span> 
+     </div>
+     <div class="content">
+       <span class="title"><%= link_to "#{serving.meal.title}", serving_path(serving.id) %></span>
+       <hr>
+       <p><%= serving.meal.description %></p>
+       <p><%= serving.meal.category %></p>
+     </div>
+     <div class="content">
+     <ul class="small-block-grid-2">
+      <li><h5>Day:</h5><b><%= serving.day %></b></li>
+      <li><h5>Location:</h5><b><%= serving.location %></b></li>
+    </ul>
+    <ul class="small-block-grid-2">
+      <li><h5>Price:</h5><b><%= serving.price %> £</b></li>
+      <li><%= link_to "Order", new_serving_order_path(serving), class: "btn-btn-primary" %></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+
+  <% end %>
+
+  </div>
+  <% end %>
+
+<% else %>
+
+<div class ="row spacer" data-equalizer>
+<div class="medium-4 columns" data-equalizer-watch>
  <div class="card">
    <div class="image" style="height: 200px">
-     <img src="<%= serving.meal.graffiti_image %>">
-     <span> <span>Cook : <%= serving.meal.user.name %></span></span> 
+     <img src="<%= @serving.meal.graffiti_image %>">
+     <span> <span>Cook : <%= @serving.meal.user.name %></span></span> 
    </div>
    <div class="content">
-     <span class="title"><%= link_to "#{serving.meal.title}", serving_path(serving.id) %></span>
+     <span class="title"><%= link_to "#{@serving.meal.title}", serving_path(@serving.id) %></span>
      <hr>
-     <p><%= serving.meal.description %></p>
-     <p><%= serving.meal.category %></p>
+     <p><%= @serving.meal.description %></p>
+     <p><%= @serving.meal.category %></p>
    </div>
    <div class="content">
    <ul class="small-block-grid-2">
-    <li><h5>Day:</h5><b><%= serving.day %></b></li>
-    <li><h5>Location:</h5><b><%= serving.location %></b></li>
+    <li><h5>Day:</h5><b><%= @serving.day %></b></li>
+    <li><h5>Location:</h5><b><%= @serving.location %></b></li>
   </ul>
   <ul class="small-block-grid-2">
-    <li><h5>Price:</h5><b><%= serving.price %> £</b></li>
-    <li><%= link_to "Order", new_serving_order_path(serving), class: "btn-btn-primary" %></li>
+    <li><h5>Price:</h5><b><%= @serving.price %> £</b></li>
+    <li><%= link_to "Order", new_serving_order_path(@serving), class: "btn-btn-primary" %></li>
   </ul>
   </div>
 </div>
@@ -26,8 +65,6 @@
 
 
 
+</div>
 
-
-
-
-
+  <% end %>

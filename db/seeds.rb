@@ -35,60 +35,60 @@ u3 = User.create!(email: "marlilyn.hode@gmail.com",
                   location: "Paris")
 
 
-m1 = u1.meals.create!(title: "A super home-made curry",
-                      description: "The best curry ever",
-                      category: "asian food")
+# m1 = u1.meals.create!(title: "A super home-made curry",
+#                       description: "The best curry ever",
+#                       category: "asian food")
 
-m2 = u1.meals.create!(title: "Cool falafel",
-                      description: "Home made traditionnal falafel",
-                      category: "falafel")
-
-
-m3 = u1.meals.create!(title: "Pasta salad",
-                      description: "Pasta, cheese and aspargus",
-                      category: " Pasta salads ")
-
-m4 = u2.meals.create!(title: "Hyper good duck",
-                      description: "Slowly cooked duck with good sides",
-                      category: " Duck")
-
-s1 = Serving.create!(   meal_id: m1.id,
-                        day: Time.now + 1.week.to_i,
-                        price: 12,
-                        location: "Coven Garden",
-                        number: 5,
-                        user_id: u1.id)
-
-s2 = Serving.create!(   meal_id: m2.id,
-                        day: Time.now + 2.week.to_i,
-                        price: 17,
-                        location: "Notting Hill",
-                        number: 3,
-                        user_id: u1.id)
-
-s3 = Serving.create!(   meal_id: m3.id,
-                        day: Time.now + 1.week.to_i,
-                        price: 21,
-                        location: "Hyde Park",
-                        number: 2,
-                        user_id: u1.id)
-
-o1 = Order.create!(serving_id: s1.id,
-                         details: "Looking forward to taste this delicious curry",
-                         sender_id: u1.id,
-                         receiver_id: u2.id)
+# m2 = u1.meals.create!(title: "Cool falafel",
+#                       description: "Home made traditionnal falafel",
+#                       category: "falafel")
 
 
+# m3 = u1.meals.create!(title: "Pasta salad",
+#                       description: "Pasta, cheese and aspargus",
+#                       category: " Pasta salads ")
 
-m1.graffiti_image = Rails.root.join("db/images/curry.jpg").open
-m1.save!
+# m4 = u2.meals.create!(title: "Hyper good duck",
+#                       description: "Slowly cooked duck with good sides",
+#                       category: " Duck")
 
-m2.graffiti_image = Rails.root.join("db/images/falafel.jpg").open
-m2.save!
+# s1 = Serving.create!(   meal_id: m1.id,
+#                         day: Time.now + 1.week.to_i,
+#                         price: 12,
+#                         location: "Coven Garden",
+#                         number: 5,
+#                         user_id: u1.id)
 
-m3.graffiti_image = Rails.root.join("db/images/pasta_bowl.jpg").open
-m3.save!
+# s2 = Serving.create!(   meal_id: m2.id,
+#                         day: Time.now + 2.week.to_i,
+#                         price: 17,
+#                         location: "Notting Hill",
+#                         number: 3,
+#                         user_id: u1.id)
 
-m4.graffiti_image = Rails.root.join("db/images/duck.jpg").open
-m4.save!
+# s3 = Serving.create!(   meal_id: m3.id,
+#                         day: Time.now + 1.week.to_i,
+#                         price: 21,
+#                         location: "Hyde Park",
+#                         number: 2,
+#                         user_id: u1.id)
+
+# o1 = Order.create!(serving_id: s1.id,
+#                          details: "Looking forward to taste this delicious curry",
+#                          sender_id: u1.id,
+#                          receiver_id: u2.id)
+
+
+
+# m1.graffiti_image = Rails.root.join("db/images/curry.jpg").open
+# m1.save!
+
+# m2.graffiti_image = Rails.root.join("db/images/falafel.jpg").open
+# m2.save!
+
+# m3.graffiti_image = Rails.root.join("db/images/pasta_bowl.jpg").open
+# m3.save!
+
+# m4.graffiti_image = Rails.root.join("db/images/duck.jpg").open
+# m4.save!
 

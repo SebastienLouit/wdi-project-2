@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get "/inbox", to: "orders#inbox"
   get "/outbox", to: "orders#outbox"
+  get "/map", to: "statics#map"
   root "statics#home"
 
   resources :orders, only: [] do 

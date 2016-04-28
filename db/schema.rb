@@ -62,6 +62,8 @@ ActiveRecord::Schema.define(version: 20160426104858) do
     t.date     "day"
     t.float    "price"
     t.string   "location"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "number"
     t.integer  "meal_id"
     t.integer  "user_id"

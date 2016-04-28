@@ -4,7 +4,7 @@
 <%= form_for @serving do |f| %>
   <% if @serving.errors.any? %>
     <% for message in @serving.errors.full_messages %>
-      <div class="alert alert-danger" role="alert">
+      <div class="alert-box alert round" role="alert">
         <%= message %>
       </div>
     <% end %>
@@ -18,7 +18,7 @@
     <%= f.date_field :day, class: "form-control" %>
   </fieldset>
   <fieldset class="form-group">
-    <%= f.label :number %>
+    <%= f.label "avalability" %>
     <%= f.text_area :number, class: "form-control" %>
   </fieldset>
   <fieldset class="form-group">

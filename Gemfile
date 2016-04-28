@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.2.3"
+gem 'gmaps4rails'
+gem 'geocoder'
 gem 'acts_as_commentable', '4.0.2'
 gem 'ransack'
 gem 'rmagick'

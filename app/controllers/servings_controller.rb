@@ -38,7 +38,7 @@ class ServingsController < ApplicationController
 
   private
       def serving_params
-          params.require(:serving).permit(:meal_id,:day, :price, :number, :location)
+          params.require(:serving).permit(:meal_id,:day, :price, :number, :location, :latitude, :longitude)
       end
 
       def search_params

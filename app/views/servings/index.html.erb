@@ -1,5 +1,5 @@
 
-
+<div class='full_row1' id="content">
 <div class="row">
   <div class="small-8 medium-6 large-5 small-centered columns">
     <div class="header panel">
@@ -11,13 +11,14 @@
   </div>
 </div>
 <hr>
-
+</div>
+ 
 <button><%= sort_link @q, :day %></button>
 <button><%= sort_link @q, :price %></button>
 <button><%= sort_link @q, :location %></button>
 
-<div class="row" data-equilizer>
-<%= render @servings %>
-</div>
+
+<%= render "servings/serving" %>
+
 
 

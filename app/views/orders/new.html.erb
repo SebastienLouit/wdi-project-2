@@ -3,7 +3,7 @@
 <%= form_for [@serving, @order] do |f| %>
   <% if @order.errors.any? %>
     <% for message in @order.errors.full_messages %>
-      <div class="alert alert-danger" role="alert">
+      <div class="alert-box alert round" role="alert">
         <%= message %>
       </div>
     <% end %>
