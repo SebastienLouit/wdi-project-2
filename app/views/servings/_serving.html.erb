@@ -20,7 +20,7 @@
             <li><h5>Location:</h5><b><%= serving.location %></b></li>
           </ul>
           <ul class="small-block-grid-2">
-            <li><h5>Price:</h5><b><%= serving.price %> £</b></li>
+            <li><h5>Price:</h5><b>£<%= serving.price %> </b></li>
             <li><%= link_to "Order", new_serving_order_path(serving), class: "button text-transform" %></li>
           </ul>
         </div>
