@@ -10,26 +10,26 @@ User.destroy_all
 Meal.destroy_all
 Serving.destroy_all
 
-u1 = User.create!(email: "sebastien.louit@gmail.com", 
-                  password: "password", 
-                  username: "sebastien", 
+u1 = User.create!(email: "sebastien.louit@gmail.com",
+                  password: "password",
+                  username: "sebastien",
                   name: "Sebastien",
                   description: "Meat lover, curry cooker and salmond eater",
                   photo: "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/62671_10153018266300851_120386450870403545_n.jpg?oh=5876f837fb34d2a444a60217355c5505&oe=577677C4", 
                   location: "Notting Hill, London")
-            
-u2 = User.create!(email: "marion.heuze@gmail.com", 
-                  password: "password", 
-                  username: "marion", 
-                  name: "Marion", 
+
+u2 = User.create!(email: "marion.heuze@gmail.com",
+                  password: "password",
+                  username: "marion",
+                  name: "Marion",
                   description: "Vegetable lover, asian food enthousiast and loves spicy food",
                   photo: "https://scontent-lhr3-1.xx.fbcdn.net/t31.0-8/s960x960/10919436_10152510086976619_6124128323041883217_o.jpg",
                   location: "Something Hill, London")
 
-u3 = User.create!(email: "marlilyn.hode@gmail.com", 
-                  password: "password", 
-                  username: "marilyn", 
-                  name: "marlilyn", 
+u3 = User.create!(email: "marlilyn.hode@gmail.com",
+                  password: "password",
+                  username: "marilyn",
+                  name: "marlilyn",
                   description: "Veggi, loves cat, healthy food, and other healthy cool stuff",
                   photo: "https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/308446_10150415933421055_1107897337_n.jpg?oh=ea4e1a23f1270c9eb19ff6da188fd9e9&oe=57A8ECBF",
                   location: "Paris")
@@ -91,4 +91,3 @@ u3 = User.create!(email: "marlilyn.hode@gmail.com",
 
 # m4.graffiti_image = Rails.root.join("db/images/duck.jpg").open
 # m4.save!
-
